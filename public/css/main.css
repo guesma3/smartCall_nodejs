@@ -1,0 +1,334 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 1.7vw;
+    font-family: 'Cairo' sans-serif;
+    color: wheat;
+}
+
+body {
+    background-color: cadetblue;
+    position: relative;
+    height: 100vh;
+    border-radius: 2vw;
+    overflow: hidden;
+}
+
+/** Message d'urgence **/
+
+.urgent-float {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 10000;
+    overflow: hidden;
+}
+
+.urgent-float .animated {
+    animation: coming .6s forwards;
+}
+
+.urgent-float .roomNum {
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 1vw;
+}
+
+.urgent-float .waiting {
+    background-color: crimson;
+    color: aliceblue;
+}
+
+.urgent-float .ok {
+    background-color: cadetblue;
+    color: aliceblue;
+}
+
+.urgent-float .dims1 {
+    padding: 2vw;
+    width: 46vw;
+    height: 31vw;
+    font-size: 17vw;
+    border-radius: 13vw 4.5vw 4.5vw 4.5vw;
+}
+
+.urgent-float .dims2 {
+    padding: 2vw;
+    width: 40vw;
+    height: 28vw;
+    font-size: 15vw;
+    border-radius: 12vw 4vw 4vw 4vw;
+}
+
+.urgent-float .dims3 {
+    padding: 1.8vw;
+    width: 35vw;
+    height: 22.2vw;
+    font-size: 15vw;
+    border-radius: 12vw 4vw 4vw 4vw;
+}
+
+.urgent-float .dims4 {
+    padding: 1.8vw;
+    width: 27vw;
+    height: 22vw;
+    font-size: 10.5vw;
+    border-radius: 8vw 1.2vw 1.2vw 1.2vw;
+}
+
+.urgent-float .dims5 {
+    padding: .13vw;
+    width: 21vw;
+    height: 12vw;
+    font-size: 8vw;
+    border-radius: 4vw 1.3vw 1.3vw 1.3vw;
+}
+
+.urgent-float .dims6 {
+    padding: .04vw;
+    width: 17vw;
+    height: 8vw;
+    font-size: 8vw;
+    border-radius: 4vw 1.3vw 1.3vw 1.3vw;
+}
+
+.urgent-float .dims7 {
+    padding: .04vw;
+    width: 17vw;
+    height: 7vw;
+    font-size: 7.7vw;
+    border-radius: 4vw 1.3vw 1.3vw 1.3vw;
+}
+
+/* Slide bloc */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(77, 141, 143);
+    height: 93vh;
+    width: 69.5vw;
+    border-radius: 0 0 5vw 0;
+    box-shadow: 1vw 1vw 2vw rgba(0, 0, 0, .7);
+    overflow: hidden;
+}
+
+.slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Extensions bloc */
+.extentions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(118, 177, 179);
+    height: 96vh;
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.extentions .horloge {
+    text-align: center;
+    background-color: rgba(255, 255, 255, .1);
+    width: 96%;
+    margin: 0 auto;
+    box-shadow: 0 0 .1vw rgba(0, 0, 0, .3);
+    border-radius: 2vw;
+    overflow: hidden;
+}
+
+.extentions .horloge .horsligne {
+    margin: 8vw 0;
+    font-weight: bold;
+    color: white;
+    font-size: 4vw;
+}
+
+.extentions .horloge .time {
+    margin-top: 4vw;
+    font-weight: bold;
+    color: white;
+    font-size: 5vw;
+}
+
+.extentions .horloge .time .sep1,
+.extentions .horloge .time .sep2 {
+    margin-top: 4vw;
+    font-weight: bold;
+    color: inherit;
+    font-size: inherit;
+}
+
+.extentions .horloge .time .sep2 {
+    color: rgb(118, 177, 179);
+}
+
+.extentions .horloge .time span {
+    font-weight: bold;
+    color: white;
+    font-size: 2vw;
+}
+
+.extentions .horloge .weather {
+    margin-bottom: 4vw;
+    font-weight: bold;
+    color: white;
+    font-size: 1.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.extentions .horloge .weather .bloc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: auto;
+    flex: 1;
+    color: aliceblue;
+}
+
+.extentions .horloge .weather .bloc img {
+    height: 4vw;
+    display: block;
+    margin: 0 auto;
+}
+
+.extentions .prayer {
+    width: 96%;
+    margin: 0 auto 1vw auto;
+    height: auto;
+    box-shadow: 0 0 .1vw rgba(0, 0, 0, .5);
+    border-radius: 2vw;
+    overflow: hidden;
+}
+
+.extentions .prayer h1 {
+    box-shadow: 0 0 .1vw rgba(0, 0, 0, .5);
+    color: white;
+    font-weight: bold;
+    padding: 1vw;
+    text-align: center;
+}
+
+.extentions .prayer h2 {
+    color: white;
+    font-weight: bold;
+    padding: .5vw;
+    padding-right: 2vw;
+    border-bottom: .1vw solid cadetblue;
+    text-align: right;
+}
+
+.extentions .prayer h2 span {
+    float: left;
+    color: white;
+    font-weight: bold;
+    padding-left: 2vw;
+}
+
+.extentions .brand {
+    width: 96%;
+    margin: 0 auto 1vw auto;
+    height: auto;
+    box-shadow: 0 0 .1vw rgba(0, 0, 0, .5);
+    border-radius: 2vw;
+    overflow: hidden;
+}
+
+.extentions .brand h1 {
+    box-shadow: 0 0 .1vw rgba(0, 0, 0, .5);
+    color: white;
+    font-weight: bold;
+    padding: 1vw;
+    text-align: center;
+}
+
+/* News bloc */
+.news {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(138, 167, 168);
+    height: 4vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.news .marquee {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+    width: 90vw;
+    margin-bottom: .5vw;
+    display: flex;
+    align-items: center;
+}
+
+.news .marquee marquee {
+    width: 100%;
+    height: auto;
+    background-color: #2C3E50;
+    border-radius: .8vw;
+    border: 1px solid rgb(14, 122, 126);
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.news .marquee marquee .messages {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.news .marquee marquee .messages img {
+    height: 2.3vw;
+    margin: .2vw 18vw;
+    border-radius: 20%;
+}
+.news .marquee marquee .messages h1 {
+    font-size: 2.3vw;
+}
+
+@keyframes coming {
+    from {
+        position: absolute;
+        right: -120%;
+        transition: all 0s;
+    }
+
+    to {
+        position: relative;
+        right: 0;
+        opacity: 1;
+        transition: all .3s ease;
+    }
+}

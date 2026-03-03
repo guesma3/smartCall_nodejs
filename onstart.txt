@@ -1,0 +1,2 @@
+ls ~/.config/autostart/
+nano ~/.config/autostart/run-runchrom.desktop
